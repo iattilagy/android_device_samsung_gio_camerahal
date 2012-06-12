@@ -29,7 +29,7 @@
 #include <unistd.h>
 
 #include <cutils/log.h>
-#include <ui/OverlayHtc.h>
+#include <ui/Overlay.h>
 #include <camera/CameraParameters.h>
 #include <hardware/camera.h>
 #include <binder/IMemory.h>
@@ -384,7 +384,7 @@ static void wrap_data_callback_timestamp(nsecs_t timestamp, int32_t msg_type,
 
 void CameraHAL_FixupParams(android::CameraParameters &camParams)
 {
-    const char *preferred_size = "640x480";
+    const char *preferred_size = "320x240";
     const char *preview_frame_rates  = "30,27,24,15";
     const char *preferred_rate = "30";
 
