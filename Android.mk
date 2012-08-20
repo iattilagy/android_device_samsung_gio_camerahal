@@ -10,7 +10,7 @@ LOCAL_SRC_FILES      := cameraHAL.cpp
 LOCAL_PRELINK_MODULE := false
 
 LOCAL_SHARED_LIBRARIES := liblog libutils libcutils libui libhardware libcamera_client
-TARGET_GLOBAL_LD_DIRS += -L$(LOCAL_PATH) -lcamera
+TARGET_GLOBAL_LDFLAGS += -L$(LOCAL_PATH) -lcamera
 LOCAL_C_INCLUDES := $(TOP)/frameworks/base/include
 
 ifeq ($(BOARD_HAVE_HTC_FFC), true)
